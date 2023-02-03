@@ -9,6 +9,7 @@
 ### Graph being used 
 ![alt text](./Screenshot%202023-02-02%20at%207.47.51%20PM.png)
 ### Terminal output of Graph
+```
 Printed Graph: (src, dst, weight)
 (0, 1, 6) (0, 2, 5) 
 (1, 0, 6) (1, 2, 7) (1, 2, 4) 
@@ -22,3 +23,4 @@ Current Node ( 2 ): 5 4 0 10 1000000000 1000000000
 Current Node ( 3 ): 9 8 8 0 1000000000 1000000000 
 Current Node ( 4 ): 1000000000 1000000000 1000000000 1000000000 0 1 
 Current Node ( 5 ): 1000000000 1000000000 1000000000 1000000000 1 0 
+```
