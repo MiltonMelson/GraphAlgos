@@ -49,7 +49,7 @@ int main(int argc, char* argv[]) {
             int weight = edge.second;
             int newPath = currDistance + weight;
 
-            // if new distance is less than currently stored distance to this node
+            // if new path is less than current stored path to this node
             if (newPath < distanceTable[node][neighborNode]) {
                distanceTable[node][neighborNode] = newPath;
                pq.push({weight, neighborNode});
