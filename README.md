@@ -1,7 +1,7 @@
 # Graph Alorithms 
 ## To Build
    - make
-## To Clean
+## To Clean *.out files
    - make clean
 # DijkstraAlgo
 ## To Test
