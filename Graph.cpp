@@ -4,7 +4,7 @@
 Graph::Graph(vector<Edge> const &edges, int n) {
    // resize the vector to hold `n` elements of type vector<Edge>
    adjList.resize(n);
-
+   setNodeCount(n);
    // add edges to the directed graph
    for (auto &edge: edges) {
       int src = edge.src;
@@ -30,15 +30,14 @@ void Graph::setNodeCount(int n) {
 }
  
 // Function to print adjacency list representation of a graph
-void Graph::printGraph(Graph const &graph)
-{
-    for (int i = 0; i < n; i++)
-    {
-        // Function to print all neighboring vertices of a given vertex
-        for (Pair v: graph.adjList[i]) {
-            cout << "(" << i << ", " << v.first << ", " << v.second << ") ";
-        }
-        cout << endl;
-    }
+void Graph::printGraph(Graph const &graph) {
+   cout << "Printed Graph: (src, dst, weight)" << endl;
+   for (int i = 0; i < nodes; i++){
+      // Function to print all neighboring vertices of a given vertex
+      for (Pair v: graph.adjList[i]) {
+         cout << "(" << i << ", " << v.first << ", " << v.second << ") ";
+      }
+      cout << endl;
+   }
 }
  

@@ -1,14 +1,17 @@
 #ifndef GRAPH_H
 #define GRAPH_H
-
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 // Data structure for Edges
 struct Edge {
    int src, dst, weight;
+   Edge(int s, int d, int w) {
+      src = s;
+      dst = d;
+      weight = w;
+   }
 };
 
 typedef pair<int, int> Pair;
