@@ -1,9 +1,9 @@
-# Graph Alorithms 
+# Graph Algorithms 
 ## To Build
    - make
 ## To Clean *.out files
    - make clean
-# DijkstraAlgo
+# Dijkstra Algorithm
 ## To Test
    - ./testDijkstra.sh
 ### Graph being used 

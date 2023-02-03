@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
    // distance table for each node
    vector<vector<int>> distanceTable(n, vector<int>(n, 1e9));
 
-   // create a shortest path table for each node in graph 0-5
+   // Find the shortest path for all nodes
    for (int node = 0; node < graph.getNodeCount(); node++) {
 
       // min heap to store {distance, node}
@@ -39,23 +39,25 @@ int main(int argc, char* argv[]) {
       pq.push({0, node});
 
       while(!pq.empty()) {
-         // grab min distance node
-         int dis = pq.top().first;
-         int src = pq.top().second;
+         // grab smallest distance node from min heap
+         int currNode = pq.top().second;
+         int currDistance = pq.top().first;
          pq.pop();
 
-         for (auto edge: graph.adjList[src]) {
-            int w = edge.second;
-            int dst = edge.first;
+         for (auto edge: graph.adjList[currNode]) {
+            int neighborNode = edge.first;
+            int weight = edge.second;
+            int newPath = currDistance + weight;
 
             // if new distance is less than currently stored distance to this node
-            if (dis + w < distanceTable[node][dst]) {
-               distanceTable[node][dst] = dis + w;
-               pq.push({w, dst});
+            if (newPath < distanceTable[node][neighborNode]) {
+               distanceTable[node][neighborNode] = newPath;
+               pq.push({weight, neighborNode});
             }
          }
       }
    }
+   printTable(distanceTable);
    return 0;
 }
 
