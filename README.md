@@ -7,7 +7,7 @@
 ## To Test
    - ./testDijkstra.sh
 ### Graph being used 
-![alt text](./Screenshot%202023-02-02%20at%207.47.51%20PM.png)
+![alt text](./image.png)
 ### Terminal output of Graph
 ```
 Printed Graph: (src, dst, weight)
